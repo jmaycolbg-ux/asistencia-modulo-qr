@@ -1,0 +1,140 @@
+:root { 
+  --azul: #1e4d8f; 
+  --fondo: #f3f6fb; 
+  --ok: #2e8b57; 
+  --error: #c0392b; 
+  --aviso: #d68910; 
+}
+
+* { 
+  box-sizing: border-box; 
+}
+
+body { 
+  margin: 0; 
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+  background: var(--fondo); 
+  color: #222; 
+}
+
+header { 
+  background: var(--azul); 
+  color: #fff; 
+  padding: 1rem 2rem; 
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+main { 
+  max-width: 1000px; 
+  margin: 1.5rem auto; 
+  padding: 0 1rem; 
+  display: grid; 
+  gap: 1.5rem; 
+}
+
+.card { 
+  background: #fff; 
+  padding: 1.25rem; 
+  border-radius: 10px; 
+  box-shadow: 0 2px 8px rgba(0,0,0,.08); 
+}
+
+.card h2 {
+  margin-top: 0;
+  color: var(--azul);
+  border-bottom: 2px solid #e3e3e3;
+  padding-bottom: 0.5rem;
+}
+
+input, button { 
+  padding: .6rem; 
+  font-size: 1rem; 
+  border: 1px solid #bbb; 
+  border-radius: 6px; 
+}
+
+button { 
+  background: var(--azul); 
+  color: #fff; 
+  border: none; 
+  cursor: pointer; 
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #153766;
+}
+
+#inputLector { 
+  width: 100%; 
+  font-size: 1.3rem; 
+  border: 2px solid var(--azul);
+  outline: none;
+}
+
+.form-fila { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: .5rem; 
+  margin-bottom: 1rem; 
+}
+
+.form-fila input { 
+  flex: 1; 
+  min-width: 150px; 
+}
+
+.filtro-contenedor {
+  margin-bottom: 1rem;
+}
+
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  margin-top: .75rem; 
+}
+
+th, td { 
+  padding: .6rem; 
+  border-bottom: 1px solid #e3e3e3; 
+  text-align: left; 
+}
+
+th {
+  background-color: #f8f9fa;
+}
+
+.mensaje { 
+  margin-top: 1rem; 
+  padding: .9rem; 
+  border-radius: 6px; 
+  font-weight: 600; 
+  display: none; 
+}
+
+.mensaje.ok { 
+  display: block; 
+  background: #e6f4ec; 
+  color: var(--ok); 
+  border: 1px solid var(--ok);
+}
+
+.mensaje.error { 
+  display: block; 
+  background: #fbeaea; 
+  color: var(--error); 
+  border: 1px solid var(--error);
+}
+
+.mensaje.aviso { 
+  display: block; 
+  background: #fdf2e0; 
+  color: var(--aviso); 
+  border: 1px solid var(--aviso);
+}
+
+.qr-mini canvas, .qr-mini img { 
+  width: 64px; 
+  height: 64px; 
+}
